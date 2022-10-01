@@ -1,5 +1,6 @@
 package com.example.ciclodevida
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,5 +11,9 @@ class MainActivity3 : AppCompatActivity() {
         setContentView(R.layout.activity_main3)
     }
 
-    fun click(view: View) {}
+    fun click(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+    }
 }
