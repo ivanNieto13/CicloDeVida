@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mp: MediaPlayer
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     fun click(view: View) {
         val intent = Intent(this, MainActivity2::class.java)
         startActivity(intent)
+        Animatoo.animateSpin(this)
     }
 
     override fun onStart() {
